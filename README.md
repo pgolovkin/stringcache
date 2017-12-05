@@ -15,6 +15,12 @@ As a result I see an output when compare object links:
       
       String str2 = "test";
       
+      and
+      
+      String str1 = "val";
+      
+      String str2 = String.valueOf("val");
+      
 But The next is not cached:
 
       String str1 = "test";
