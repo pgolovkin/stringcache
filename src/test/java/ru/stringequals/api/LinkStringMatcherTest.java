@@ -64,4 +64,21 @@ public class LinkStringMatcherTest {
 
   }
 
+  @Test
+  public void matchSameValueOfStrings() {
+    int positive = 0;
+    int negative = 0;
+    for (int i = 0; i < 1_000_000; i++) {
+      String str1 = "val";
+      String str2 = String.valueOf("val");
+      if (str1 == str2) {
+        positive++;
+      } else {
+        negative++;
+      }
+    }
+    System.out.println(String.format(" matchSameNewStrings positive = %d, negative = %d", positive, negative));
+
+  }
+
 }
