@@ -1,5 +1,9 @@
 Test for string comparison
 
+I've decided to test when String is getting from string pool or not.
+
+To find out it I've just used comparison using `==` operator.
+
 As a result I see an output when compare object links:
 
  matchSameNewStrings positive = 0, negative = 1000000
@@ -9,7 +13,7 @@ As a result I see an output when compare object links:
  matchSameLinks positive = 1000000, negative = 0
  
  
- Well. The next is cached:
+ Well. The next are from pool:
  
       String str1 = "test";
       
@@ -21,7 +25,7 @@ As a result I see an output when compare object links:
       
       String str2 = String.valueOf("val");
       
-But The next is not cached:
+But The next are not from pool:
 
       String str1 = "test";
       
